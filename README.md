@@ -28,15 +28,15 @@ Or install it yourself as:
     Download pictures with number you want to get from icon8.com with keyword to find
         $ tomosia_icon8_crawl crawl "keyword" --destination="storage path" --max=number
 ### Developers:
-    #### Gemfile:
+    Gemfile:
         $ gem 'tomosia_icon8_crawl'
-    #### Require:
+    Require:
         $ require 'tomosia_icon8_crawl'
-    #### Download all photos including pages from icon8.com with keyword you search
+    Download all photos including pages from icon8.com with keyword you search
         $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination")
-    #### Download pictures with number you want to get from icon8.com with keyword to find
+    Download pictures with number you want to get from icon8.com with keyword to find
         $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination", max)
-    #### Help:
+    Help:
         - keyword is the word used for searching.
             ex: corona, car, virus,...
         - destination is the path of the directory where the image was downloaded.
