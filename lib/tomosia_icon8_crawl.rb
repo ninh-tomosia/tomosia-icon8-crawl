@@ -1,5 +1,3 @@
-require "tomosia_icon8_crawl/version"
-
 module TomosiaIcon8Crawl
 	require 'open-uri'
 	require "HTTParty"
@@ -45,8 +43,8 @@ module TomosiaIcon8Crawl
 				format_url.set_color('blue')
 				format_url.set_align('center')
 
-	    		worksheet = workbook.add_worksheet
-
+				worksheet = workbook.add_worksheet
+				
 	    		worksheet.write_string(0, 0, 'STT', format)
 		    	worksheet.write_string(0, 1, 'NAME', format)
 		    	worksheet.write_string(0, 2, 'URL', format)
@@ -88,6 +86,7 @@ module TomosiaIcon8Crawl
 					File.open(path, 'wb') do |file|
 						file.write(image.read)
 						@size = image.size
+						p @size
 					end	
 				end
 			rescue
@@ -95,8 +94,6 @@ module TomosiaIcon8Crawl
 					timeout += 1
 					p "Retry download image"
 					retry
-				else
-					next
 				end
 			end		
 		end
@@ -134,30 +131,15 @@ module TomosiaIcon8Crawl
 				des = ""
 	        	json(keyword, max)
 				@responses['icons'].each_with_index do |item, index| 
-					title = item['commonName']
-					
 
 					src = "https://img.icons8.com/#{item['platform']}/2x/#{item['commonName']}.png"
-					# Extension image
-					
-
-					# Name image
-					img_name = File.basename(src, ext)
 
 					# add image
 					images.push(src)
-					
-					# Size image
-					size = src.size.to_s + 'px'
-
-					# push data
-					
-					
 				end
-				# p data
 
-		        save_file_excel(path, data)
 				multi_download_image(path, images)
+				save_file_excel(path, @data)
 	    	rescue Exception => e
 	    		p "--Runtime error--"
 	    		p e
