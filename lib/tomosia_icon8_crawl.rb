@@ -86,7 +86,7 @@ module TomosiaIcon8Crawl
 					File.open(path, 'wb') do |file|
 						file.write(image.read)
 						@size = image.size
-						p @size
+						# p @size
 					end	
 				end
 			rescue
