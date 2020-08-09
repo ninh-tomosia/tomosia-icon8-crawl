@@ -22,7 +22,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Commandline or Terminal:
+    Download all photos including pages from icon8.com with keyword you search
+        $ tomosia_icon8_crawl crawl "keyword" --destination="storage path"
+    Download pictures with number you want to get from icon8.com with keyword to find
+        $ tomosia_icon8_crawl crawl "keyword" --destination="storage path" --max=number
+Developers:
+    Gemfile:
+        $ gem 'tomosia_icon8_crawl'
+    Require:
+        $ require 'tomosia_icon8_crawl'
+    Download all photos including pages from icon8.com with keyword you search
+        $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination")
+    Download pictures with number you want to get from icon8.com with keyword to find
+        $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination", max)
+    Help:
+        - keyword is the word used for searching.
+            ex: corona, car, virus,...
+        - destination is the path of the directory where the image was downloaded.
+            ex: E:\download, C:\download, C:\Desktop,...
+        - max max is the number of images you want to download.
+            ex: 100, 10, 5, 1000,...
+
 
 ## Development
 
