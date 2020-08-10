@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["ninh-tomosia"]
   spec.email         = ["tt.ninh.le@tomosia.com"]
 
-  spec.summary       = %q{tomosia-icon8-crawl using download image from icon8.com}
+  spec.summary       = %q{tomosia-icon8-crawl using download image from icons8.com}
   spec.homepage      = "https://github.com/ninh-tomosia/tomosia-icon8-crawl"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
