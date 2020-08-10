@@ -6,7 +6,7 @@ module TomosiaIcon8Crawl
   class CrawlIcon8
 
     # get data from website
-    def self.json(key, max)
+    def self.json(key, max = nil)
       if key == nil
         p "No data!"
       else 
@@ -15,7 +15,7 @@ module TomosiaIcon8Crawl
           page = HTTParty.get(urlc)
           res = page.parsed_response
           countAll = res['parameters']['countAll']
-          url = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=' + countAll
+          url = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=' + countAll.to_s
         else
            url = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=' + max
         end
@@ -64,10 +64,10 @@ module TomosiaIcon8Crawl
             row.each do |key, value|
               # p key
 
-              worksheet.write_string(i, 0, row['index'].to_s, data_col)
+              worksheet.write_string(i, 0, row['index'], data_col)
               worksheet.write_string(i, 1, row['name'], data_col)
               worksheet.write_url(i, 2, row['url'], format_url)
-              worksheet.write_string(i, 3, row['size'].to_s, data_col)
+              worksheet.write_string(i, 3, row['size'], data_col)
               worksheet.write_string(i, 4, row['extension'], data_col)
             end
           end
