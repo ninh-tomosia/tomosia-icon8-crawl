@@ -8,7 +8,11 @@ module TomosiaIcon8Crawl
     option :destination
     option :max
     def crawl(keyword)
-      TomosiaIcon8Crawl::CrawlIcon8.crawl(keyword, options[:destination], options[:max])
+      if options[:max] == nil
+      	TomosiaIcon8Crawl::CrawlIcon8.crawl(keyword, options[:destination])
+      else
+      	TomosiaIcon8Crawl::CrawlIcon8.crawl(keyword, options[:destination], options[:max].to_i)
+      end
     end
   end
 end

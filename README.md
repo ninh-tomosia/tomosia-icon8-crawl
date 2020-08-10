@@ -14,49 +14,49 @@ gem 'tomosia_icon8_crawl'
 
 And then execute:
 
-    $ bundle install
+  $ bundle install
 
 Or install it yourself as:
 
-    $ gem install tomosia_icon8_crawl
+  $ gem install tomosia_icon8_crawl
 
 ## Usage
 
 ### Commandline or Terminal:
 
-    Download all photos including pages from icon8.com with keyword you search
+  Download all photos including pages from icon8.com with keyword you search
     
-        $ tomosia_icon8_crawl crawl "keyword" --destination="storage path"
+    $ tomosia_icon8_crawl crawl "keyword" --destination="storage path"
         
-    Download pictures with number you want to get from icon8.com with keyword to find
+  Download pictures with number you want to get from icon8.com with keyword to find
     
-        $ tomosia_icon8_crawl crawl "keyword" --destination="storage path" --max=number
+    $ tomosia_icon8_crawl crawl "keyword" --destination="storage path" --max=number
         
 ### Developers:
 
-    Gemfile:
+  Gemfile:
     
-        $ gem 'tomosia_icon8_crawl'
+    $ gem 'tomosia_icon8_crawl'
         
-    Require:
+  Require:
     
-        $ require 'tomosia_icon8_crawl'
+    $ require 'tomosia_icon8_crawl'
         
-    Download all photos including pages from icon8.com with keyword you search
+  Download all photos including pages from icon8.com with keyword you search
     
-        $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination")
+    $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination")
         
-    Download pictures with number you want to get from icon8.com with keyword to find
+  Download pictures with number you want to get from icon8.com with keyword to find
     
-        $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination", max)
+    $ TomosiaIcon8Crawl::CrawlIcon8.crawl("keyword", "destination", max)
         
-    Help:
-        - keyword is the word used for searching.
-            ex: corona, car, virus,...
-        - destination is the path of the directory where the image was downloaded.
-            ex: E:\download, C:\download, C:\Desktop,...
-        - max max is the number of images you want to download.
-            ex: 100, 10, 5, 1000,...
+  Help:
+    - keyword is the word used for searching.
+        ex: corona, car, virus,...
+    - destination is the path of the directory where the image was downloaded.
+        ex: E:\download, C:\download, C:\Desktop,...
+    - max max is the number of images you want to download.
+        ex: 100, 10, 5, 1000,...
 
 
 
