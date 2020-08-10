@@ -1,8 +1,8 @@
 module TomosiaIcon8Crawl
 	require 'open-uri'
-	require "HTTParty"
+	require "httparty"
 	require 'pry'
-	require 'WriteExcel'
+	require 'writeexcel'
 	class CrawlIcon8
 
 		# get data from website
@@ -11,13 +11,13 @@ module TomosiaIcon8Crawl
 				p "No data!"
 			else 
 				if max == nil
-					uri = "https://search.icons8.com/api/iconsets/v5/search?term=#{key}&amount=1"
-					page = HTTParty.get(uri)
+					urlc = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=1'
+					page = HTTParty.get(urlc)
 					res = page.parsed_response
 					countAll = res['parameters']['countAll']
-					url = "https://search.icons8.com/api/iconsets/v5/search?term=#{key}&amount=#{countAll}"
+					url = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=' + countAll
 				else
-					url = "https://search.icons8.com/api/iconsets/v5/search?term=#{key}&amount=#{max}"
+					url = 'https://search.icons8.com/api/iconsets/v5/search?term=' + key + '&amount=' + max
 				end
 			end
 			
@@ -64,10 +64,10 @@ module TomosiaIcon8Crawl
 			    		row.each do |key, value|
 			    			# p key
 
-				    		worksheet.write_string(i, 0, row['index'], data_col)
+				    		worksheet.write_string(i, 0, row['index'].to_s, data_col)
 				    		worksheet.write_string(i, 1, row['name'], data_col)
 				    		worksheet.write_url(i, 2, row['url'], format_url)
-				    		worksheet.write_string(i, 3, row['size'], data_col)
+				    		worksheet.write_string(i, 3, row['size'].to_s, data_col)
 				    		worksheet.write_string(i, 4, row['extension'], data_col)
 			    		end
 			    	end
@@ -77,7 +77,7 @@ module TomosiaIcon8Crawl
 	    		workbook.close
 			rescue Exception => e
 				p "Can't saved file"
-				p e
+				# p e
 				# break
 			end
 		end
