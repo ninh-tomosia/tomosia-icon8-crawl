@@ -1,7 +1,6 @@
 module TomosiaIcon8Crawl
   require 'open-uri'
   require "httparty"
-  require 'pry'
   require 'writeexcel'
   class CrawlIcon8
 
@@ -127,7 +126,7 @@ module TomosiaIcon8Crawl
         p "no data"
         p e
       end
-      p "\nDownload success!"
+      print "\nDownload success!\n"
     end
 
     # main

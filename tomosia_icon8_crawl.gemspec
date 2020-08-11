@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "httparty", '~> 0.17.3'
   spec.add_runtime_dependency "writeexcel", '~> 1.0', '>= 1.0.5'
   spec.add_runtime_dependency "nokogiri", '~> 1.10', '>= 1.10.10'
-  spec.add_runtime_dependency "pry", '~> 0.13.1'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

@@ -4,7 +4,6 @@ PATH
     tomosia_icon8_crawl (0.1.4)
       httparty
       nokogiri
-      pry
       thor
       writeexcel
 
@@ -24,9 +23,6 @@ GEM
     multi_xml (0.6.0)
     nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
-    pry (0.13.1)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     rake (12.3.3)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
